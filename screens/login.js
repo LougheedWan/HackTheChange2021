@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, StyleSheet, View, Text, Button} from "react-native";
+import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
 
 const LoginScreen = ({ nav }) => {
     return (
@@ -9,7 +9,7 @@ const LoginScreen = ({ nav }) => {
             </Text>
             <input></input>
             <input></input>
-            <Button>Login</Button>
+            <Button title="Login" onPress={() => Alert.alert('Login Button pressed')} />
         </ScrollView>
         </View>
     )
