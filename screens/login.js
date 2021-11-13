@@ -19,7 +19,7 @@ const LoginScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     form: {
-        
+        alignItems: 'center'
     },
     title: {
         fontWeight: 'bold',
