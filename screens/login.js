@@ -5,7 +5,7 @@ const LoginScreen = ({ nav }) => {
     return (
         <View style = {styles.form}>
         <ScrollView >
-            <Text style = {styles.title}>Welcome!
+            <Text style = {styles.title}>Welcome!!!!!!!!!!
             </Text>
             <input></input>
             <input></input>
