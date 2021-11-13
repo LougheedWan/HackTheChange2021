@@ -1,18 +1,16 @@
 import React from "react";
 import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
 
-const LoginScreen = ({ navigation }) => {
-
+const dashboard = ({ navigation }) => {
     return (
         <View style = {styles.form}>
         <ScrollView >
-            <Text style = {styles.title}>Welcome
-            </Text>
-            <input placeholder = "Username"></input>
-            <input placeholder = "Password"></input>
-            <Button title="Login" onPress={() => 
-                navigation.navigate('Dashboard')} />
+            <Text>DASHBOARD</Text>
         </ScrollView>
+        <Button title="Calendar" onPress={() => 
+                navigation.navigate('Calendar')} />
+        <Button title="Stats" onPress={() => 
+                navigation.navigate('Stats')} />
         </View>
     )
 };
@@ -28,4 +26,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+export default dashboard;

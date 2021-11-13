@@ -1,17 +1,11 @@
 import React from "react";
 import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
 
-const LoginScreen = ({ navigation }) => {
-
+const calendar = ({ navigation }) => {
     return (
         <View style = {styles.form}>
         <ScrollView >
-            <Text style = {styles.title}>Welcome
-            </Text>
-            <input placeholder = "Username"></input>
-            <input placeholder = "Password"></input>
-            <Button title="Login" onPress={() => 
-                navigation.navigate('Dashboard')} />
+            <Text>Calendar</Text>
         </ScrollView>
         </View>
     )
@@ -28,4 +22,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+export default calendar;
