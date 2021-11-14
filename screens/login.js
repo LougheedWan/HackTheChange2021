@@ -27,7 +27,7 @@ const LoginScreen = ({ navigation }) => {
     return (
         <Card mode = "elevated" style = {styles.form}>
             <Card.Content style = {styles.form}>
-            <Title style = {styles.title}>Welcome</Title>
+            <Title style = {styles.title}>Zenio</Title>
             <TextInput placeholder = "Username" onChangeText = {un => setUn(un)}></TextInput>
             <TextInput secureTextEntry={true}  placeholder = "Password" onChangeText = {pw => setPw(pw)}></TextInput>
             </Card.Content>

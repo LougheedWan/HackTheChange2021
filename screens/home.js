@@ -5,10 +5,10 @@ import Deadlines from "../components/deadlines";
 const home = ({ navigation }) => {
 
     return (
-        <View>
+        <ScrollView>
              <EmotionLog></EmotionLog>
             <Deadlines></Deadlines>
-        </View>
+        </ScrollView>
 
     )
       
