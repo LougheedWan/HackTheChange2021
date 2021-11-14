@@ -90,7 +90,7 @@ const deadlines = ({ navigation }) => {
 
         <form onSubmit={formik.handleSubmit}>
         <br></br>
-        <Text style = {styles.title}>Emotions Log</Text>
+        <Text style = {styles.title}>Deadline Log</Text>
         <br></br>
         <View style = {styles.container}>
                     <Text><b>Date of Assignment: </b></Text>
