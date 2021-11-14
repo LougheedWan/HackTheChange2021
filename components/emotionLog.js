@@ -1,5 +1,5 @@
 import React, {Component, useState, useEffect} from "react";
-import { ScrollView, SafeAreaView, StyleSheet, View, Text, Alert} from "react-native";
+import { ScrollView, SafeAreaView, StyleSheet, View, Text, Alert, Linking} from "react-native";
 //import FontistoIcon from 'react-native-vector-icons/Fontisto';
 //import EntypoIcon from 'react-native-vector-icons/Entypo';
 //import AntDesignIcon from 'react-native-vector-icons/AntDesign';
@@ -52,6 +52,7 @@ const emotionLog = ({ navigation }) => {
             backgroundColor4: 'white',
             backgroundColor5: 'white',
           });
+          alert("Great! Have great day then!")
         }
       };
     
@@ -64,6 +65,7 @@ const emotionLog = ({ navigation }) => {
             backgroundColor4: 'white',
             backgroundColor5: 'white',
           });
+          alert("Sound Good! Have a good day!")
         }
       };
       const changeColor3 = () => {
@@ -75,6 +77,7 @@ const emotionLog = ({ navigation }) => {
             backgroundColor4: 'white',
             backgroundColor5: 'white',
           });
+          alert("Thanks for letting me know! Keep it up!")
         }
       };
      const changeColor4 = () => {
@@ -86,6 +89,7 @@ const emotionLog = ({ navigation }) => {
             backgroundColor4: '#6EB5FF',
             backgroundColor5: 'white',
           });
+          alert("Oh no, sorry to hear that, would maybe looking at our resources tab help?")
         }
       };
      const changeColor5 = () => {
@@ -97,6 +101,7 @@ const emotionLog = ({ navigation }) => {
             backgroundColor4: 'white',
             backgroundColor5: '#FF8FAB',
           });
+          alert("Sounds Terrible! Go take a look at our resources tab to see if you will feel better.")
         }
      };
   
