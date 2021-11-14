@@ -4,10 +4,11 @@ import { ScrollView, SafeAreaView, StyleSheet, View, Text, Alert} from "react-na
 //import EntypoIcon from 'react-native-vector-icons/Entypo';
 //import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import StatsPage from "../screens/stats"
 import { IconButton, Card, Title, TextInput, Colors, Platform, Button,TouchableOpacity} from 'react-native-paper';
 import moment from 'moment';
 
-const emotionLog = () => {
+const emotionLog = ({ navigation }) => {
 
     const [currentDate, setCurrentDate] = useState('');
   
@@ -67,7 +68,7 @@ const emotionLog = () => {
                     <Text><b> </b></Text>
                 </View>
 
-                <Button mode="contained" onPress={() => console.log('Pressed')}>Submit</Button>
+                <Button mode="contained" onPress={() => alert("Thank you for your submission today!")}>Submit</Button>
 
         </ScrollView>
         </View>
