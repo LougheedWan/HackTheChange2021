@@ -1,5 +1,6 @@
-import React from "react";
-import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
+import React, { useEffect } from 'react';
+import { ScrollView, StyleSheet, View, Text, Button, Alert} from 'react-native';
+import calendarView from '../calenderView_api';
 
 const calendar = ({ navigation }) => {
     return (
@@ -22,4 +23,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default calendar;
+export default calendarView;
