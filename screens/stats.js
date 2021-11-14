@@ -50,7 +50,7 @@ const stats = ({ navigation }) => {
       ];
     return (
         <View>
-            <Title>Emotions Within the Month</Title>
+            <Title style = {styles.title}>Emotions Within the Month</Title>
   <PieChart
   data={data}
   width={Dimensions.get("window").width}

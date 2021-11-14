@@ -1,9 +1,9 @@
 import React, {Component, useState, useEffect} from "react";
-import { ScrollView, StyleSheet, View, Text, TextInput, Button, Alert} from "react-native";
+import { ScrollView, StyleSheet, View,SafeAreaView, Alert} from "react-native";
 import { useFormik } from 'formik';
 import ComboDatePicker from "./ComboDatePicker";
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { IconButton, Card, Title, Colors, Platform,TouchableOpacity} from 'react-native-paper';
+import { IconButton, Text, Card, Title, Colors, Platform,TextInput, TouchableOpacity, Button} from 'react-native-paper';
 
 const deadlines = ({ navigation }) => {
     const [state, setState] = useState({
@@ -79,40 +79,58 @@ const deadlines = ({ navigation }) => {
             Category: '',
             Emotion: '',
         },
+        /*
         onSubmit: values => {
           alert(JSON.stringify(values, null, 2));
         },
+        */
       });
     return (
         <View style = {styles.form}>
 
         <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="DueDate">Date of Assignment: </label>
+        <br></br>
+        <Text style = {styles.title}>Emotions Log</Text>
+        <br></br>
+        <View style = {styles.container}>
+                    <Text><b>Date of Assignment: </b></Text>
+        </View>
         <ComboDatePicker
             className={"test"}
             id="DueDate" 
             name="DueDate"
         />
         <br></br>
-        <label htmlFor="AssignmentName">Assignment Name: </label>
-        <input
-            id="AssignmentName"
-            name="AssignmentName"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.AssignmentName}
-        />
+        <View style = {styles.container}>
+                    <Text><b>Assignment Name: </b></Text>
+        </View>
+
+        <SafeAreaView>
+                    <TextInput styles = {styles.input} placeholder="Enter here"/>
+        </SafeAreaView>
+        
+        <View style={styles.container}>
+                    <Text><b> </b></Text>
+        </View>
+        
+    
         <br></br>
-        <label htmlFor="Category">Category: </label>
-        <input
-            id="Category"
-            name="Category"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.Category}
-        />
+        <View style = {styles.container}>
+                    <Text><b>Category: </b></Text>
+                    </View>
+
+        <SafeAreaView>
+            <TextInput styles = {styles.input} placeholder="Enter here"/>
+        </SafeAreaView>
+        
+        <View style={styles.container}>
+                    <Text><b> </b></Text>
+        </View>
+
         <br></br>
-        <label htmlFor="Emotion">How are you feeling for the assignment? </label>
+        <View style = {styles.container}>
+                    <Text><b>How are you feeling for the assignment? </b></Text>
+        </View>
         <br></br>
         
         <View style={{flexDirection:'row'}}>
@@ -126,7 +144,7 @@ const deadlines = ({ navigation }) => {
         
         <br></br>
 
-        <button type="submit">Submit</button>
+        <Button mode="contained" onPress={() => alert("Thank you for your submission today!")} >Submit</Button>
         </form>
         </View>
     )
@@ -135,15 +153,20 @@ const deadlines = ({ navigation }) => {
 const styles = StyleSheet.create({
     form: {
         alignItems: 'center',
+        padding: 30
+        },
+    title: {
+        alignItems: 'center',
         fontWeight: 'bold',
         fontSize: 24,
-        color: '#532d84',
-    },
-    title: {
-        fontWeight: 'bold',
-        fontSize: 30,
-        color: 'blue'
-    },
+        color: '#532d84'
+        }, 
+    container: {
+        marginTop: 30,
+        marginBottom: 10, 
+        fontSize: 20,
+        alignItems: 'center'
+        }
 });
 
 export default deadlines;

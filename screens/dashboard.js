@@ -11,7 +11,7 @@ const Tab = createMaterialBottomTabNavigator();
 const dashboard = ({ navigation }) => {
 
     return (
-        <Tab.Navigator shifting={false}>
+        <Tab.Navigator shifting={false} >
             <Tab.Screen name = "Home" component={HomePage}/>
             <Tab.Screen name = "Calendar" component={CalendarPage}/>
             <Tab.Screen name = "Stats" component={StatsPage}/>
