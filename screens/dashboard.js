@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
 import HomePage from "./home"
-import CalendarPage from "./calenderView";
+import CalendarPage from "./calendarView";
 import StatsPage from "./stats"
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 

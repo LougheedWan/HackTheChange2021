@@ -19,17 +19,14 @@
     "expo": "~43.0.2",
     "expo-calendar": "~10.0.3",
     "expo-status-bar": "~1.1.0",
-    "formik":"2.2.9",
+    "formik": "2.2.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-<<<<<<< HEAD
     "react-native-calendars": "^1.1268.0",
-=======
     "react-native-chart-kit": "^6.11.0",
     "react-native-gifted-charts": "^0.1.15",
     "react-native-linear-gradient": "^2.5.6",
->>>>>>> f018357ff5171593fc1209ab29a29a183492773f
     "react-native-paper": "^4.10.0",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.8.0",
