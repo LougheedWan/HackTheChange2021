@@ -11,6 +11,16 @@ import moment from 'moment';
 const emotionLog = ({ navigation }) => {
 
     const [currentDate, setCurrentDate] = useState('');
+    const [state, setState] = useState({
+        backgroundColor: 'white',
+        backgroundColor2: 'white',
+        backgroundColor3: 'white',
+        backgroundColor4: 'white',
+        backgroundColor5: 'white',
+        pressed: false,
+      });
+
+    console.log(state);
   
     /*
     useEffect(() => {
@@ -32,6 +42,63 @@ const emotionLog = ({ navigation }) => {
                       .format('DD/MM/YYYY   h:mm a');
         setCurrentDate(date);
       }, []);
+    
+      const changeColor = () => {
+        if (!state.pressed) {
+          setState({
+            backgroundColor: '#B28DFF',
+            backgroundColor2: 'white',
+            backgroundColor3: 'white',
+            backgroundColor4: 'white',
+            backgroundColor5: 'white',
+          });
+        }
+      };
+    
+      const changeColor2 = () => {
+        if (!state.pressed) {
+          setState({
+            backgroundColor: 'white',
+            backgroundColor2: '#FDDD5C',
+            backgroundColor3: 'white',
+            backgroundColor4: 'white',
+            backgroundColor5: 'white',
+          });
+        }
+      };
+      const changeColor3 = () => {
+        if (!state.pressed) {
+          setState({
+            backgroundColor: 'white',
+            backgroundColor2: 'white',
+            backgroundColor3: '#9BD0B9',
+            backgroundColor4: 'white',
+            backgroundColor5: 'white',
+          });
+        }
+      };
+     const changeColor4 = () => {
+        if (!state.pressed) {
+          setState({
+            backgroundColor: 'white',
+            backgroundColor2: 'white',
+            backgroundColor3: 'white',
+            backgroundColor4: '#6EB5FF',
+            backgroundColor5: 'white',
+          });
+        }
+      };
+     const changeColor5 = () => {
+        if (!state.pressed) {
+          setState({
+            backgroundColor: 'white',
+            backgroundColor2: 'white',
+            backgroundColor3: 'white',
+            backgroundColor4: 'white',
+            backgroundColor5: '#FF8FAB',
+          });
+        }
+     };
   
 
     return (
@@ -49,11 +116,11 @@ const emotionLog = ({ navigation }) => {
                 </View>
 
                 <View style={{flexDirection:'row'}}>
-                    <IconButton icon = "emoticon-excited-outline" color= "#B28DFF" size={35} onPress={() => console.log('Pressed')}></IconButton>
-                    <IconButton icon = "emoticon-happy-outline" color="#FDDD5C" size={35} onPress={() => console.log('Pressed')}/>
-                    <IconButton icon ="emoticon-neutral-outline" color="#9BD0B9" size={35}/>
-                    <IconButton icon ="emoticon-cry-outline" color="#6EB5FF" size={35}/>
-                    <IconButton icon ="emoticon-angry-outline" color="#FF8FAB" size={35}/>
+                    <IconButton icon = "emoticon-excited-outline" style={{ backgroundColor: state.backgroundColor, padding: 10 }} size={35} onPress={changeColor}></IconButton>
+                    <IconButton icon = "emoticon-happy-outline" style={{ backgroundColor: state.backgroundColor2, padding: 10 }} size={35} onPress={changeColor2}/>
+                    <IconButton icon ="emoticon-neutral-outline" style={{ backgroundColor: state.backgroundColor3, padding: 10 }} size={35}  onPress={changeColor3}/>
+                    <IconButton icon ="emoticon-cry-outline" style={{ backgroundColor: state.backgroundColor4, padding: 10 }} size={35}  onPress={changeColor4}/>
+                    <IconButton icon ="emoticon-angry-outline" style={{ backgroundColor: state.backgroundColor5, padding: 10 }} size={35}  onPress={changeColor5}/>
                 </View>
 
                 <View style={styles.container}>
