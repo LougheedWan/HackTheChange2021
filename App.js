@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import parseErrorStack from 'react-native/Libraries/Core/Devtools/parseErrorStack';
 import Login from './screens/login';
 import Dashboard from './screens/dashboard';
-import Calendar from './screens/calenderView';
+import Calendar from './screens/calendarView';
 import Stats from './screens/stats';
 import Signup from './screens/signup';
 import { NavigationContainer } from '@react-navigation/native';
