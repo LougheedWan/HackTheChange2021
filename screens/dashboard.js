@@ -1,20 +1,20 @@
 import React from "react";
 import { ScrollView, StyleSheet, View, Text, Button, Alert} from "react-native";
-import EmotionLog from "../components/emotionLog";
-import Deadlines from "../components/deadlines";
+import HomePage from "./home"
+import CalendarPage from "./calenderView";
+import StatsPage from "./stats"
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+const Tab = createMaterialBottomTabNavigator();
+
 const dashboard = ({ navigation }) => {
+
     return (
-        <View style = {styles.form}>
-        <ScrollView >
-            <Text>DASHBOARD</Text>
-            <EmotionLog></EmotionLog>
-            <Deadlines></Deadlines>
-        </ScrollView>
-        <Button title="Calendar" onPress={() => 
-                navigation.navigate('Calendar')} />
-        <Button title="Stats" onPress={() => 
-                navigation.navigate('Stats')} />
-        </View>
+        <Tab.Navigator>
+            <Tab.Screen name = "Home" component={HomePage}/>
+            <Tab.Screen name = "Calendar" component={CalendarPage}/>
+            <Tab.Screen name = "Stats" component={StatsPage}/>
+        </Tab.Navigator>
     )
 };
 

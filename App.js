@@ -6,6 +6,7 @@ import Login from './screens/login';
 import Dashboard from './screens/dashboard';
 import Calendar from './screens/calenderView';
 import Stats from './screens/stats';
+import Signup from './screens/signup';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -13,7 +14,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+      <NavigationContainer >
       <Stack.Navigator>
         <Stack.Screen
           name= "Login"
@@ -31,8 +32,13 @@ export default function App() {
           name= "Stats"
           component= {Stats}
         />
+        <Stack.Screen
+          name= "Signup"
+          component= {Signup}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+    
    
     
   );
