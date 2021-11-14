@@ -16,41 +16,41 @@ const stats = ({ navigation }) => {
           name: "Excited",
           population: 3,
           color: "#B28DFF",
-          legendFontColor: "#B28DFF",
+          legendFontColor: "#532d84",
           legendFontSize: 15
         },
         {
           name: "Happy",
           population: 15,
           color: "#F8DF81",
-          legendFontColor: "#F8DF81",
+          legendFontColor: "#532d84",
           legendFontSize: 15
         },
         {
-          name: "neutral",
+          name: "Neutral",
           population: 10,
           color: "#9BD0B9",
-          legendFontColor: "#9BD0B9",
+          legendFontColor: "#532d84",
           legendFontSize: 15
         },
         {
             name: "Sad",
             population: 2,
             color: "#6EB5FF",
-            legendFontColor: "#6EB5FF",
+            legendFontColor: "#532d84",
             legendFontSize: 15
           },
           {
-            name: "Mad",
+            name: "Angry",
             population: 1,
             color: "#FF8FAB",
-            legendFontColor: "#FF8FAB",
+            legendFontColor: "#532d84",
             legendFontSize: 15
           },
       ];
     return (
         <View>
-            <Title>Month Breakdown:</Title>
+            <Title>Emotions Within the Month</Title>
   <PieChart
   data={data}
   width={Dimensions.get("window").width}
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: 'bold',
         fontSize: 30,
-        color: 'blue'
+        color: '#532d84'
     }
 });
 

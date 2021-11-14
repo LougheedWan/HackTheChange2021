@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: 'bold',
         fontSize: 30,
-        color: 'purple',
+        color: '#532d84',
         paddingBottom: 30,
         paddingTop: 30
     },
