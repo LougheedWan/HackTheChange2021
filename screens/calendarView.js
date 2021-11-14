@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { ScrollView, StyleSheet, View, Text, Alert, TouchableOpacity, Switch, Image} from 'react-native';
 import {Calendar, Agenda} from 'react-native-calendars';
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { IconButton, Card, Title, TextInput, Colors, Platform, Button} from 'react-native-paper';
+// import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import { IconButton, Card, Title, TextInput, Colors, Platform, Button} from 'react-native-paper';
 
 
 const calendar = ({ navigation }) => {
@@ -47,7 +47,7 @@ export default class AgendaScreen extends Component {
           }, 
           {name: 'Lunch with Alice from Paris                                     12:00 PM - 1:30 PM                                                                Superb Steakhouse'}], 
     
-          '2021-11-14': [{name: 'CPSC 413 Dynamic Programming Quiz             12:00 PM - 2:00 PM                                      Science A'}, 
+          '2021-11-14': [{name: 'CPSC 413 Dynamic Programming Quiz             12:00 PM - 2:00 PM                                      Science A', mood: 'mad'}, 
           {name: 'Mental Health & Covid-19 Webniar                     5:00 PM - 7:00 PM                                                                Zoom'}]}}
           loadItemsForMonth={this.loadItems.bind(this)}
           selected={'2021-11-11'}
@@ -76,7 +76,13 @@ export default class AgendaScreen extends Component {
           theme = {{arrowColor: "#673ab7", monthTextColor: "#532d84", dayTextColor: "#866ca8", indicatorColor: "#cbc0da", selectedDayBackgroundColor: '#673ab7',
                   agendaDayTextColor: '#644290',
                   agendaDayNumColor: '#644290', agendaTodayColor: '#644290',
-                  agendaKnobColor: '#644290'}}
+                  agendaKnobColor: '#644290',
+                  
+                  textMonthFontFamily: 'sans-serif',
+                  textDayFontFamily: 'sans-serif',
+                  textDayHeaderFontFamily: 'sans-serif'
+                
+                }}
         
            hideExtraDays={false}
         />
@@ -131,9 +137,8 @@ export default class AgendaScreen extends Component {
            } */}
           
           </Text>
-           <Text>{item.mood ? `🍪` : `😋`}</Text>
+           <Text>{item.mood ? `😡` : `🙂`}</Text>
           
-
         </TouchableOpacity>
       );
     }
@@ -169,13 +174,15 @@ export default class AgendaScreen extends Component {
       height: 15,
       flex: 1,
       paddingTop: 30
-    },
-
-    logo: {
-        width: 50,
-        height: 50,
-        alignContent: 'center'
     }
+
+    // logo: {
+    //     width: 50,
+    //     height: 50,
+    //     alignContent: 'center'
+    // }
+
+
   });
 
 
