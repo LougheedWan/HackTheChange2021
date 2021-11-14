@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import { ScrollView, StyleSheet, View, Text, Alert} from "react-native";
 import {Card, Title, Button, TextInput} from 'react-native-paper';
 
-
 const LoginScreen = ({ navigation }) => {
-
+    
+    console.log(global.addedUsers);
     const authorize = () => {
 
         // as of right now we do hard coded authorization:
@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }) => {
             navigation.navigate('Dashboard');
         }
         else {
-            alert("wrong creds");
+            alert("incorrect username or password, please try again");
         }
     }
 
@@ -29,7 +29,7 @@ const LoginScreen = ({ navigation }) => {
             <Card.Content style = {styles.form}>
             <Title style = {styles.title}>Welcome</Title>
             <TextInput placeholder = "Username" onChangeText = {un => setUn(un)}></TextInput>
-            <TextInput type = "password"  placeholder = "Password" onChangeText = {pw => setPw(pw)}></TextInput>
+            <TextInput secureTextEntry={true}  placeholder = "Password" onChangeText = {pw => setPw(pw)}></TextInput>
             </Card.Content>
             <Card.Actions style = {styles.form}>
             <Button onPress={authorize}>Login</Button>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: 'bold',
         fontSize: 30,
-        color: 'blue',
+        color: 'purple',
         paddingBottom: 30,
         paddingTop: 30
     },
